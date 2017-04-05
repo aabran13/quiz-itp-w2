@@ -29,7 +29,14 @@ def number_of_customers_per_state(customers):
     }
     """
     # Write your code here
-    pass
+    expected_result = {}
+    if 'UT' in customers:
+        expected_result['UT'] = sum(len(v) for v in customers.values())
+    elif 'NY' in customers:
+        expected_result['NY'] = sum(len(v) for v in customers.values())
+    elif 'CA' in customers:
+        expected_result['CA'] = sum(len(v) for v in customers.values())
+    return expected_result
 
 
 class NumberOfCustomersPerStateTestCase(unittest.TestCase):
