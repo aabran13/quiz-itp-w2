@@ -39,7 +39,9 @@ def eldest_customer_per_state(customers):
     }
     """
     # Write your code here
-    pass
+    expected_result = {}
+    if 'UT' in customers != None:
+        for x in range
 
 
 class EldestCustomerTestCase(unittest.TestCase):
