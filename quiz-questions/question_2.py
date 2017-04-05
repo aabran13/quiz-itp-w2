@@ -28,14 +28,13 @@ def number_of_customers_per_state(customers):
         'NY': 1
     }
     """
-    # Write your code here
+    # Updated solutions
     expected_result = {}
-    if 'UT' in customers:
-        expected_result['UT'] = sum(len(v) for v in customers.values())
-    elif 'NY' in customers:
-        expected_result['NY'] = sum(len(v) for v in customers.values())
-    elif 'CA' in customers:
-        expected_result['CA'] = sum(len(v) for v in customers.values())
+    for state, people in customers.items():
+        if people is None:
+            expected_result[state] = 0
+        else:
+            expected_result[state] = len(people)
     return expected_result
 
 
