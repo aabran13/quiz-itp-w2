@@ -44,7 +44,7 @@ def eldest_customer_per_state(customers):
         eldest_customer = None
         for customer in list_customers:
             if eldest_customer is None:
-                edlest_customer = customer
+                eldest_customer = customer
             else:
                 prev_customer_age = eldest_customer['age']
                 current_customer_age = customer['age']
